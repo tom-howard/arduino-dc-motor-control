@@ -1,5 +1,9 @@
 ## Exercise 3: Controlling a DC Motor with an H-Bridge
 
+### The Code
+
+[ex3-h-bridge-motor-control.ino](./ex3-h-bridge-motor-control.ino)
+
 ### Components
 
 * DC Motor: [DFRobot Accessories Micro DC Motor with Encoder-SJ01](https://www.mouser.co.uk/ProductDetail/DFRobot/FIT0450)
