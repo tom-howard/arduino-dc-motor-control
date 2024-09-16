@@ -1,5 +1,8 @@
 const byte hallSensorPin = 2;
 volatile long counter = 0;
+// Some variables for controlling code execution rates:
+unsigned long timestamp = millis();
+unsigned long elapsed = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -12,11 +15,12 @@ void setup() {
 }
 
 void loop() {
-  if (millis() % 1000 == 0) {
+  elapsed = millis() - timestamp;
+  if (elapsed > 1000) {
     // Do this every ~1000 ms:
     Serial.print(counter);
     Serial.println(" magnet interrupt(s) detected");
-    delay(10);
+    timestamp = millis(); // Reset the timestamp
   }
 }
 
